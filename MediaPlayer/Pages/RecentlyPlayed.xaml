@@ -1,0 +1,95 @@
+﻿<Page x:Class="MediaPlayer.Pages.RecentlyPlayed"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MediaPlayer.Pages"
+      xmlns:u="clr-namespace:Ulti;assembly=Ulti"
+
+      mc:Ignorable="d" 
+      d:DesignHeight="530" d:DesignWidth="700"
+      Title="RecentlyPlayed" Loaded="Page_Loaded"
+      xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+
+    <Page.Resources>
+        <u:RelativeToAbsoluteConverter x:Key="absoluteConverter"/>
+        <Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="SizeWE"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DataGridColumnHeaderStyle1" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid>
+                            <theme:DataGridHeaderBorder Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" IsPressed="{TemplateBinding IsPressed}" IsHovered="{TemplateBinding IsMouseOver}" IsClickable="{TemplateBinding CanUserSort}" Padding="{TemplateBinding Padding}" SortDirection="{TemplateBinding SortDirection}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}" SeparatorBrush="{TemplateBinding SeparatorBrush}">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </theme:DataGridHeaderBorder>
+                            <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <StackPanel x:Name="playlistDetail" Margin="0,15">
+        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#a1e7f0" Margin="0,5">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="recently_img" Width="100" Height="90" Margin="20,0,0,0" Source="{Binding image,Converter={StaticResource absoluteConverter}}"/>
+                <Button Width="100" Height="90" Background="Transparent" Click="play_recently" Focusable="False" BorderThickness="0" Margin="-100,0,0,0" Cursor="Hand">
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border" Background="Transparent" Width="50" Height="50" Margin="25,20" CornerRadius="100" BorderThickness="1" BorderBrush="#00bdd6">
+                                <Path x:Name="playbuttonpath" Stretch="Uniform" Height="15" Width="15" Fill="#00bdd6" Data="M4610 6399 l0 -2881 43 25 c195 114 4144 2392 4494 2593 339 194 448 262 440 270 -7 7 -743 434 -1637 949 -894 516 -2001 1155 -2460 1420 -459 265 -845 487 -857 494 l-23 12 0 -2882z"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="Button.IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                                    <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <TextBlock VerticalAlignment="Center" Margin="0,5,0,0" FontWeight="DemiBold" FontSize="25" Foreground="#ebfdff">
+                                <!--<Run Text="{Binding name}" FontSize="20" FontWeight="DemiBold"/>
+                                    <LineBreak/>
+                                <Run Text="{Binding history.song.title}" Foreground="black" FontSize="18" FontWeight="DemiBold"/>
+                                    <LineBreak/>
+                                 History -
+                                <Run Text="{Binding history.time}" FontSize="12"/>-->
+                    Recently 
+                </TextBlock>
+
+
+            </StackPanel>
+        </DockPanel>
+
+        <Grid Name="songsGrid"  Height="340" Width="600" Margin="0,10,0,0" Background="#ebfdff" >
+            <DataGrid  x:Name="dataGrid" Style="{DynamicResource DataGridStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}" CellStyle="{DynamicResource DataGridCellStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" VirtualizingPanel.VirtualizationMode="Standard" MouseDoubleClick="select_recently">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Title" Width="300" CanUserResize="False" IsReadOnly="True"
+                                            Binding="{Binding title}"/>
+                    <DataGridTextColumn Header="Singer" Width="200" CanUserResize="False" IsReadOnly="True"
+                                            Binding="{Binding singer}" />
+                    <DataGridTextColumn Header="" Width="*" CanUserResize="False" IsReadOnly="True"
+                                            Binding="{Binding time}" />
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </StackPanel>
+</Page>

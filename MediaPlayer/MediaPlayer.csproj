@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\add.png" />
+    <None Remove="Images\back.png" />
+    <None Remove="Images\bin.png" />
+    <None Remove="Images\disk.jpg" />
+    <None Remove="Images\disk.png" />
+    <None Remove="Images\icon.png" />
+    <None Remove="Images\play.png" />
+    <None Remove="Images\playlist.png" />
+    <None Remove="Images\save.png" />
+    <None Remove="Images\upload.png" />
+    <None Remove="taglib-sharp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="taglib-sharp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Interface\Interface.csproj" />
+    <ProjectReference Include="..\Ulti\Ulti.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="taglib-sharp">
+      <HintPath>bin\Debug\net6.0-windows\taglib-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\back.png" />
+    <Resource Include="Images\bin.png" />
+    <Resource Include="Images\disk.png" />
+    <Resource Include="Images\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\play.png" />
+    <Resource Include="Images\playlist.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\upload.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\team.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\time.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\verticals.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

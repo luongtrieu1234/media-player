@@ -1,0 +1,47 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Ulti">
+
+
+    <Style TargetType="{x:Type local:NavButton}">
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Margin" Value="0,0,0,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:NavButton}">
+                    <Border x:Name="back"  Padding="15,10,0,10" Background="#a1e7f0"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Path x:Name="icon" Height="24" Width="24" Stretch="Uniform" Fill="#686583"
+                              Data="{TemplateBinding Icon}" HorizontalAlignment="Center"/>
+                            <Label x:Name="label" Content="{TemplateBinding Content}" Target="icon" FontSize="16" Foreground="#686583" FontFamily="Inter" VerticalContentAlignment="Center" Padding="10,0,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <!--<Setter Property="Background" TargetName="back" Value="blue"/>
+                            <Setter Property="Fill" TargetName="icon" Value="yellow"/>-->
+                            <Setter Property="Fill" TargetName="icon" Value="#118999"/>
+                            <Setter Property="FontWeight" TargetName="label" Value="DemiBold"/>
+                            <Setter Property="Foreground" TargetName="label" Value="#118999"/>
+                        </Trigger>
+
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" TargetName="back" Value="#ebfdff"/>
+                            <Setter Property="Fill" TargetName="icon" Value="#118999"/>
+                            <Setter Property="FontWeight" TargetName="label" Value="DemiBold"/>
+                            <Setter Property="Foreground" TargetName="label" Value="#118999"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
