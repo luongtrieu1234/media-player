@@ -14,6 +14,7 @@
     <None Remove="Images\bin.png" />
     <None Remove="Images\disk.jpg" />
     <None Remove="Images\disk.png" />
+    <None Remove="Images\home.png" />
     <None Remove="Images\icon.png" />
     <None Remove="Images\play.png" />
     <None Remove="Images\playlist.png" />
@@ -26,6 +27,12 @@
     <Content Include="taglib-sharp.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -60,9 +67,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Images\home.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Images\team.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

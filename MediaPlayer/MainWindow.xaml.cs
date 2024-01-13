@@ -106,7 +106,7 @@ namespace MediaPlayer
 
             _myPlaylists = new ObservableCollection<IPlaylist>()
             {
-                new IPlaylist() { name = "Love Song", date = "20/12/2022", listSongs = null, }
+                new IPlaylist() { name = "Love Song", date = "20/12/2024", listSongs = null, }
             };
 
             myPlaylist = new MyPlaylists(_myPlaylists, listSong,player);
@@ -456,7 +456,7 @@ namespace MediaPlayer
         {
             if (isPlayShuffle == false)
             {
-                ShuffleButton_Border.Background = (Brush)new BrushConverter().ConvertFrom("#a1e7f0");
+                ShuffleButton_Border.Background = (Brush)new BrushConverter().ConvertFrom("#212121");
                 isPlayShuffle = true;
                 if (isPlayRePeat)
                 {
@@ -476,7 +476,7 @@ namespace MediaPlayer
         {
             if (isPlayRePeat == false)
             {
-                RepeatButton_Border.Background = (Brush)new BrushConverter().ConvertFrom("#a1e7f0");
+                RepeatButton_Border.Background = (Brush)new BrushConverter().ConvertFrom("#212121");
                 isPlayRePeat = true;
                 if (isPlayShuffle)
                 {
@@ -552,6 +552,11 @@ namespace MediaPlayer
         private void FullscreenBtn_Click(object sender, RoutedEventArgs e)
         {
             FullscreenToggle();
+        }
+
+        private void home_Selected(object sender, RoutedEventArgs e)
+        {
+
         }
 
         //private void VideoContainer_KeyUp(object sender, KeyRoutedEventArgs e)

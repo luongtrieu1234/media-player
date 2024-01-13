@@ -14,8 +14,8 @@
         <u:RelativeToAbsoluteConverter x:Key="absoluteConverter"/>
     </Page.Resources>
 
-    <StackPanel>
-        <ListView Name="PLaylistsListView" Height="500" Background="Transparent" MouseDoubleClick="double_click">
+    <StackPanel Margin="0,0,0,0">
+        <ListView Name="PLaylistsListView" Height="450" Background="#212121" MouseDoubleClick="double_click">
             <ListView.Resources>
                 <ContextMenu x:Key="listViewContextMenu">
                     <MenuItem Header="Delete" Click="deleteItem_Click">
