@@ -91,8 +91,8 @@
 
 
     </Window.Resources>
-    <Canvas Background="#000">
-        <DockPanel LastChildFill="True" HorizontalAlignment="Center" Height="630" Background="#121212" VerticalAlignment="Center" Width="898">
+    <Canvas Background="#FFDFCAE3">
+        <DockPanel LastChildFill="True" HorizontalAlignment="Center" Height="630" Background="#FFA348A4" VerticalAlignment="Center" Width="898">
             <DockPanel x:Name="footer" DockPanel.Dock="Bottom" LastChildFill="True" Height="124">
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" Width="290">
                     <!--<MediaElement MediaOpened="player_MediaOpened" MediaEnded="player_MediaEnded" Height="80" Width="115" x:Name ="player" LoadedBehavior="Manual"/>-->
@@ -161,19 +161,19 @@
                     </StackPanel>
                 </DockPanel>
             </DockPanel>
-            <StackPanel Background="#212121" Width="180" DockPanel.Dock="Left">
-                <StackPanel Orientation="Horizontal" Background="#121212" Height="83">
+            <StackPanel Background="#FFA348A4" Width="180" DockPanel.Dock="Left">
+                <StackPanel Orientation="Horizontal" Background="#FFA348A4" Height="83">
                     <Image x:Name="appicon" Source="Images/icon.png" Width="50" Margin="8"/>
-                    <Label Content="Media Player"  VerticalAlignment="Center" FontFamily="Inter" Foreground="#FFF" FontSize="16" FontWeight="Bold"/>
+                    <Label Content="Media Player"  VerticalAlignment="Center" FontFamily="Inter" Foreground="#FFF2B6E2" FontSize="16" FontWeight="Bold"/>
                 </StackPanel>
-                <ListBox x:Name="sidebar" SelectionChanged="sidebar_SelectionChanged" SelectionMode="Single" BorderThickness="0" Background="#212121" Padding="0,0,-1,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                    <u:NavButton Content="Home" Name="home" Icon="M208,223.999h-.00195l-48.00586-.00634a16.01856,16.01856,0,0,1-15.99805-16v-48.001h-32v48.001a16.01856,16.01856,0,0,1-15.99805,16L48.002,223.999A15.99994,15.99994,0,0,1,32,207.999V115.53857a16.03108,16.03108,0,0,1,5.2373-11.83886l79.99317-72.73389a15.93657,15.93657,0,0,1,21.52637-.00146l80.00683,72.73584A16.03567,16.03567,0,0,1,224,115.53906v92.46a15.99994,15.99994,0,0,1-16,16ZM111.99414,143.9917h32a16.01833,16.01833,0,0,1,16,16v48.01123L208,207.999v-92.46L127.99414,42.80371,48,115.53857V207.999l47.99414-.00634v-48.001A16.01833,16.01833,0,0,1,111.99414,143.9917Z" Selected="home_Selected"/>
+                <ListBox x:Name="sidebar" SelectionChanged="sidebar_SelectionChanged" SelectionMode="Single" BorderThickness="0" Background="#FFA348A4" Padding="0,0,-1,0" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FFA348A4">
+                    <u:NavButton Content="Home" Name="home" Icon="M208,223.999h-.00195l-48.00586-.00634a16.01856,16.01856,0,0,1-15.99805-16v-48.001h-32v48.001a16.01856,16.01856,0,0,1-15.99805,16L48.002,223.999A15.99994,15.99994,0,0,1,32,207.999V115.53857a16.03108,16.03108,0,0,1,5.2373-11.83886l79.99317-72.73389a15.93657,15.93657,0,0,1,21.52637-.00146l80.00683,72.73584A16.03567,16.03567,0,0,1,224,115.53906v92.46a15.99994,15.99994,0,0,1-16,16ZM111.99414,143.9917h32a16.01833,16.01833,0,0,1,16,16v48.01123L208,207.999v-92.46L127.99414,42.80371,48,115.53857V207.999l47.99414-.00634v-48.001A16.01833,16.01833,0,0,1,111.99414,143.9917Z" Selected="home_Selected" Foreground="#FF783B3B"/>
                     <u:NavButton Navlink="/Pages/MyPlaylists.xaml" Name="myplaylists" Content="My Playlists" Icon="M104,32H56A16.01833,16.01833,0,0,0,40,48V208a16.01833,16.01833,0,0,0,16,16h48a16.01833,16.01833,0,0,0,16-16V48A16.01833,16.01833,0,0,0,104,32Zm0,176-47.99951.00977L56,208V48h48ZM200,32H152a16.01833,16.01833,0,0,0-16,16V208a16.01833,16.01833,0,0,0,16,16h48a16.01833,16.01833,0,0,0,16-16V48A16.01833,16.01833,0,0,0,200,32Zm0,176-47.99951.00977L152,208V48h48Z"/>
                     <u:NavButton Navlink="/Pages/RecentlyPlayed.xaml" Name="recently" Content="Recently Played"  Icon="M128,24A104,104,0,1,0,232,128,104.11791,104.11791,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.09957,88.09957,0,0,1,128,216Zm64-88a7.99977,7.99977,0,0,1-8,8H128a7.99977,7.99977,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A7.99977,7.99977,0,0,1,192,128Z"/>
                 </ListBox>
-                <Line Stretch="Fill" Stroke="#ebfdff" X2="1" Width="180" Height="5px" IsEnabled="False" StrokeThickness="2" Focusable="False" Margin="0,-95,0,0"/>
+                <Line Stretch="Fill" Stroke="#f2b6e2" X2="1" Width="180" Height="5px" IsEnabled="False" StrokeThickness="2" Focusable="False" Margin="0,-95,0,0"/>
             </StackPanel>
-            <StackPanel Grid.Column="1" Height="507" Width="700" Background="#ebfdff">
+            <StackPanel Grid.Column="1" Height="507" Width="700" Background="#f2b6e2">
                 <ContentControl x:Name="videoContainer" HorizontalContentAlignment="Center" Margin="0,30,0,0" Width="630"
                                     VerticalContentAlignment="Center">
                     <Border BorderThickness="1" CornerRadius="2" BorderBrush="#13343d" >
@@ -193,8 +193,8 @@
         </DockPanel>
         <Slider Style="{StaticResource Horizontal_Slider}" Visibility="Hidden" Name="volumeSlider" VerticalAlignment="Top" ValueChanged="ChangeMediaVolume" 
        Minimum="0" Maximum="1" Value="0.5" Width="60" Canvas.Left="769" Canvas.Top="550" HorizontalAlignment="Left" Panel.ZIndex="10"/>
-        <Frame x:Name="navframe" Panel.ZIndex="10" Height="525" Width="718" Visibility="Hidden" NavigationUIVisibility="Hidden" Background="#ebfdff" Canvas.Left="182" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Frame x:Name="navframe2" Panel.ZIndex="20" Height="450" Width="230" Visibility="Hidden" NavigationUIVisibility="Hidden" Background="#ebfdff" Canvas.Left="669" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Frame x:Name="navframe" Panel.ZIndex="10" Height="525" Width="718" Visibility="Hidden" NavigationUIVisibility="Hidden" Background="#f2b6e2" Canvas.Left="182" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Frame x:Name="navframe2" Panel.ZIndex="20" Height="450" Width="230" Visibility="Hidden" NavigationUIVisibility="Hidden" Background="#f2b6e2" Canvas.Left="669" HorizontalAlignment="Left" VerticalAlignment="Center"/>
     </Canvas>
 
 

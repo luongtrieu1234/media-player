@@ -44,7 +44,7 @@
     </Page.Resources>
 
     <StackPanel x:Name="playlistDetail" Margin="0,15">
-        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#a1e7f0" Margin="0,5">
+        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#f2b6e2" Margin="0,5">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="recently_img" Width="100" Height="90" Margin="20,0,0,0" Source="{Binding image,Converter={StaticResource absoluteConverter}}"/>
                 <Button Width="100" Height="90" Background="Transparent" Click="play_recently" Focusable="False" BorderThickness="0" Margin="-100,0,0,0" Cursor="Hand">
@@ -77,7 +77,7 @@
             </StackPanel>
         </DockPanel>
 
-        <Grid Name="songsGrid"  Height="340" Width="600" Margin="0,10,0,0" Background="#ebfdff" >
+        <Grid Name="songsGrid"  Height="340" Width="600" Margin="0,10,0,0" Background="#FFF6E2F0" >
             <DataGrid  x:Name="dataGrid" Style="{DynamicResource DataGridStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}" CellStyle="{DynamicResource DataGridCellStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" VirtualizingPanel.VirtualizationMode="Standard" MouseDoubleClick="select_recently">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Title" Width="300" CanUserResize="False" IsReadOnly="True"

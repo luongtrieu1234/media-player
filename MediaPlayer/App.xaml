@@ -42,10 +42,10 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#a1e7f0"/>
+                    <Setter Property="Background" Value="#f2b6e2"/>
                 </Trigger>
                 <Trigger Property="IsSelected" Value="True">
-                    <Setter Property="Background" Value="#a1e7f0"/>
+                    <Setter Property="Background" Value="#f2b6e2"/>
                     <Setter Property="FontWeight" Value="SemiBold"/>
                 </Trigger>
 
@@ -92,9 +92,9 @@
             </Setter>
         </Style>
         <SolidColorBrush x:Key="OptionMark.Static.Background" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#f2b6e2"/>
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#f2b6e2"/>
         <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>

@@ -49,7 +49,7 @@
                 <Image Source="/Images/back.png" Width="20" />
             </Button>
         </Canvas>
-        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#a1e7f0" Margin="0,5">
+        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#f2b6e2" Margin="0,5">
             <StackPanel Orientation="Horizontal">
                 <Image Name="playlistImg" Width="100" Height="90" Margin="20,0,0,0" Source="{Binding listSongs[0].image,Converter={StaticResource absoluteConverter}}"/>
 
@@ -87,7 +87,7 @@
             </StackPanel>
 
         </DockPanel>
-        <Grid Name="songsGrid"  Height="350" Width="600" Margin="0,10,0,0" Background="#ebfdff"  >
+        <Grid Name="songsGrid"  Height="350" Width="600" Margin="0,10,0,0" Background="#FFF1D5EA"  >
 
             <DataGrid  x:Name="dataGrid" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled"  
                        Style="{DynamicResource DataGridStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}" 

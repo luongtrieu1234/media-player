@@ -15,7 +15,7 @@
     </Page.Resources>
 
     <StackPanel Margin="0,0,0,0">
-        <ListView Name="PLaylistsListView" Height="450" Background="#212121" MouseDoubleClick="double_click">
+        <ListView Name="PLaylistsListView" Height="450" Background="#FFF2B6E2" MouseDoubleClick="double_click">
             <ListView.Resources>
                 <ContextMenu x:Key="listViewContextMenu">
                     <MenuItem Header="Delete" Click="deleteItem_Click">
@@ -55,10 +55,10 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <Button Height="40" Width="40" Click="uploadPlaylist" Focusable="False" BorderThickness="0" Margin="0,-90,90,0" Background="#00bdd6"  HorizontalAlignment="Right" Cursor="Hand" IsDefault="True" RenderTransformOrigin="1,0" >
+        <Button Height="40" Width="40" Click="uploadPlaylist" Focusable="False" BorderThickness="0" Margin="0,-90,90,0" Background="#FF9326EB"  HorizontalAlignment="Right" Cursor="Hand" IsDefault="True" RenderTransformOrigin="1,0" >
             <Image Height="30" Source="/Images/upload.png"  />
         </Button>
-        <Button Height="40" Width="40" Margin="0,-90,30,0" Focusable="False"  Padding="5" HorizontalAlignment="Right" Cursor="Hand" Background="#00bdd6" BorderThickness="0" Click="AddPlaylist">
+        <Button Height="40" Width="40" Margin="0,-90,30,0" Focusable="False"  Padding="5" HorizontalAlignment="Right" Cursor="Hand" Background="#FF9326EB" BorderThickness="0" Click="AddPlaylist">
             <Path Stretch="Uniform" Fill="Black" Data="M32,64a8.00008,8.00008,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8.00008,8.00008,0,0,1,32,64Zm184,56H40.00586a8,8,0,1,0,0,16H216a8,8,0,0,0,0-16Zm-72,64H40.00586a8,8,0,1,0,0,16H144a8,8,0,0,0,0-16Zm88,.00586H216v-16a8,8,0,1,0-16,0v16H184a8,8,0,0,0,0,16h16v16a8,8,0,0,0,16,0v-16h16a8,8,0,0,0,0-16Z"/>
         </Button>
     </StackPanel>
