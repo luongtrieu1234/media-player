@@ -350,6 +350,10 @@ namespace MediaPlayer.Pages
         {
             this.NavigationService.GoBack();
         }
-    
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

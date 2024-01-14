@@ -49,7 +49,7 @@
                 <Image Source="/Images/back.png" Width="20" />
             </Button>
         </Canvas>
-        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#f2b6e2" Margin="0,5">
+        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#121212" Margin="0,5">
             <StackPanel Orientation="Horizontal">
                 <Image Name="playlistImg" Width="100" Height="90" Margin="20,0,0,0" Source="{Binding listSongs[0].image,Converter={StaticResource absoluteConverter}}"/>
 
@@ -57,8 +57,8 @@
 
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border x:Name="border" Background="Transparent" Width="50" Height="50" Margin="25,20" CornerRadius="100" BorderThickness="1" BorderBrush="#00bdd6">
-                                <Path x:Name="playbuttonpath" Stretch="Uniform" Height="15" Width="15" Fill="#00bdd6" Data="M4610 6399 l0 -2881 43 25 c195 114 4144 2392 4494 2593 339 194 448 262 440 270 -7 7 -743 434 -1637 949 -894 516 -2001 1155 -2460 1420 -459 265 -845 487 -857 494 l-23 12 0 -2882z"/>
+                            <Border x:Name="border" Background="Transparent" Width="50" Height="50" Margin="25,20" CornerRadius="100" BorderThickness="1" BorderBrush="#FFF">
+                                <Path x:Name="playbuttonpath" Stretch="Uniform" Height="15" Width="15" Fill="#FFF" Data="M4610 6399 l0 -2881 43 25 c195 114 4144 2392 4494 2593 339 194 448 262 440 270 -7 7 -743 434 -1637 949 -894 516 -2001 1155 -2460 1420 -459 265 -845 487 -857 494 l-23 12 0 -2882z"/>
                             </Border>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsPressed" Value="True">
@@ -71,30 +71,30 @@
                     </Button.Template>
                 </Button>
                 <TextBlock VerticalAlignment="Center" Margin="10,5,0,0">
-                                <Run Text="{Binding name}" Foreground="black" FontSize="14" FontWeight="DemiBold"/>
+                                <Run Text="{Binding name}" Foreground="#FFF" FontSize="14" FontWeight="DemiBold"/>
                                     <LineBreak/>
-                                <Run Text="{Binding date}"  Foreground="#aaaeb6" FontSize="12"/>
+                                <Run Text="{Binding date}"  Foreground="#FFF" FontSize="12"/>
                 </TextBlock>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,30,20,0">
                 <Button Template="{DynamicResource ButtonTemplate1}" Focusable="False"  Style="{DynamicResource ButtonStyle}" Height="20" Width="20" Margin="5" Padding="2" Click="addMediaFile">
-                    <Path Stretch="Uniform"  Fill="Black" Data="M216,88H168V40a16.01833,16.01833,0,0,0-16-16H104A16.01833,16.01833,0,0,0,88,40V88H40a16.01833,16.01833,0,0,0-16,16v48a16.01833,16.01833,0,0,0,16,16H88v48a16.01833,16.01833,0,0,0,16,16h48a16.01833,16.01833,0,0,0,16-16V168h48a16.01833,16.01833,0,0,0,16-16V104A16.01833,16.01833,0,0,0,216,88Zm0,64H160a8.00008,8.00008,0,0,0-8,8v56H104V160a8.00008,8.00008,0,0,0-8-8H40V104H96a8.00008,8.00008,0,0,0,8-8V40h48V96a8.00008,8.00008,0,0,0,8,8h56Z"/>
+                    <Path Stretch="Uniform"  Fill="#FFF" Data="M216,88H168V40a16.01833,16.01833,0,0,0-16-16H104A16.01833,16.01833,0,0,0,88,40V88H40a16.01833,16.01833,0,0,0-16,16v48a16.01833,16.01833,0,0,0,16,16H88v48a16.01833,16.01833,0,0,0,16,16h48a16.01833,16.01833,0,0,0,16-16V168h48a16.01833,16.01833,0,0,0,16-16V104A16.01833,16.01833,0,0,0,216,88Zm0,64H160a8.00008,8.00008,0,0,0-8,8v56H104V160a8.00008,8.00008,0,0,0-8-8H40V104H96a8.00008,8.00008,0,0,0,8-8V40h48V96a8.00008,8.00008,0,0,0,8,8h56Z"/>
                 </Button>
                 <Button Template="{DynamicResource ButtonTemplate1}" Focusable="False" Click="DeleteAllItem_Click"  Style="{DynamicResource ButtonStyle}" Height="20" Width="20" Margin="5" Padding="2">
-                    <Path Stretch="Uniform" Fill="Black" Data="M215.99609,48H176V40a24.02718,24.02718,0,0,0-24-24H104A24.02718,24.02718,0,0,0,80,40v8H39.99609a8,8,0,0,0,0,16h8V208a16.01833,16.01833,0,0,0,16,16h128a16.01833,16.01833,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8.00917,8.00917,0,0,1,8-8h48a8.00917,8.00917,0,0,1,8,8v8H96Zm95.99609,168h-128V64h128ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"/>
+                    <Path Stretch="Uniform" Fill="#FFF" Data="M215.99609,48H176V40a24.02718,24.02718,0,0,0-24-24H104A24.02718,24.02718,0,0,0,80,40v8H39.99609a8,8,0,0,0,0,16h8V208a16.01833,16.01833,0,0,0,16,16h128a16.01833,16.01833,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8.00917,8.00917,0,0,1,8-8h48a8.00917,8.00917,0,0,1,8,8v8H96Zm95.99609,168h-128V64h128ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"/>
                 </Button>
             </StackPanel>
 
         </DockPanel>
-        <Grid Name="songsGrid"  Height="350" Width="600" Margin="0,10,0,0" Background="#FFF1D5EA"  >
+        <Grid Name="songsGrid"  Height="350" Width="600" Margin="0,10,0,0" Background="#212121"  >
 
             <DataGrid  x:Name="dataGrid" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled"  
                        Style="{DynamicResource DataGridStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}" 
                        CellStyle="{DynamicResource DataGridCellStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" 
                        VirtualizingPanel.VirtualizationMode="Standard" MouseDoubleClick="PlayItemInPlaylist">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Title" Width="300" CanUserResize="False" IsReadOnly="True"
+                    <DataGridTextColumn Header="Title" Foreground="#FFF" Width="300" CanUserResize="False" IsReadOnly="True"
                                             Binding="{Binding title}">
                         <DataGridTextColumn.ElementStyle>
                             <Style>
@@ -103,7 +103,7 @@
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="Singer" Width="200" CanUserResize="False" IsReadOnly="True" FontSize="10"
+                    <DataGridTextColumn Header="Singer" Foreground="#FFF" Width="200" CanUserResize="False" IsReadOnly="True" FontSize="10"
                                             Binding="{Binding singer}">
                         <DataGridTextColumn.ElementStyle>
                             <Style>

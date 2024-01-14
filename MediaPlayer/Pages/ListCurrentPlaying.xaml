@@ -7,9 +7,9 @@
       Title="ListCurrentPlaying" Height="450" Loaded="page_loaded">
 
     <DockPanel LastChildFill="True" Margin="5">
-        <Canvas Height="33" DockPanel.Dock="Top">
-            <TextBox Name="nameMedia" Height="30" Width="220" VerticalContentAlignment="Center" TextChanged="searchChanged" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label Name ="labelHintName" Foreground="Gray" HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" >Search</Label>
+        <Canvas Height="33" DockPanel.Dock="Top" Background="#12C64B">
+            <TextBox Name="nameMedia" Height="30" Width="220" Background="#12C64B" VerticalContentAlignment="Center" TextChanged="searchChanged" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Name ="labelHintName" Foreground="#FFF" HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" >Search</Label>
         </Canvas>
         <ListView Name="currentPlayingListView" Background="Transparent" MouseDoubleClick="select_item" DockPanel.Dock="Bottom">
             <ListView.Resources>
@@ -33,12 +33,12 @@
             </ListView.ItemsPanel>
             <ListView.ItemTemplate >
                 <DataTemplate >
-                    <StackPanel Orientation="Horizontal" Width="200" Height="50" Focusable="False" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#a1e7f0" Margin="0,5">
+                    <StackPanel Orientation="Horizontal" Width="200" Height="50" Focusable="False" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#212121" Margin="0,5">
                         <!--<Image Width="50" Height="50" Margin="5,0,0,0" VerticalAlignment ="Center"  Source="{Binding image}"/>-->
                         <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" TextWrapping="WrapWithOverflow">
-                                    <Run Text="{Binding title}" Foreground="black" FontSize="12" FontWeight="DemiBold"/>
+                                    <Run Text="{Binding title}" Foreground="#FFF" FontSize="12" FontWeight="DemiBold"/>
                                      <LineBreak/>
-                                    <Run Text="{Binding singer}"  Foreground="black" FontSize="10" />
+                                    <Run Text="{Binding singer}"  Foreground="#FFF" FontSize="10" />
                                     <LineBreak/>
                                     <!--<Run Text="{Binding time}"  Foreground="#aaaeb6" FontSize="10"/>-->
                         </TextBlock>

@@ -44,15 +44,15 @@
     </Page.Resources>
 
     <StackPanel x:Name="playlistDetail" Margin="0,15">
-        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#f2b6e2" Margin="0,5">
+        <DockPanel LastChildFill="True" Width="600" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#121212" Margin="0,5">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="recently_img" Width="100" Height="90" Margin="20,0,0,0" Source="{Binding image,Converter={StaticResource absoluteConverter}}"/>
                 <Button Width="100" Height="90" Background="Transparent" Click="play_recently" Focusable="False" BorderThickness="0" Margin="-100,0,0,0" Cursor="Hand">
 
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
-                            <Border x:Name="border" Background="Transparent" Width="50" Height="50" Margin="25,20" CornerRadius="100" BorderThickness="1" BorderBrush="#00bdd6">
-                                <Path x:Name="playbuttonpath" Stretch="Uniform" Height="15" Width="15" Fill="#00bdd6" Data="M4610 6399 l0 -2881 43 25 c195 114 4144 2392 4494 2593 339 194 448 262 440 270 -7 7 -743 434 -1637 949 -894 516 -2001 1155 -2460 1420 -459 265 -845 487 -857 494 l-23 12 0 -2882z"/>
+                            <Border x:Name="border" Background="Transparent" Width="50" Height="50" Margin="25,20" CornerRadius="100" BorderThickness="1" BorderBrush="#FFF">
+                                <Path x:Name="playbuttonpath" Stretch="Uniform" Height="15" Width="15" Fill="#FFF" Data="M4610 6399 l0 -2881 43 25 c195 114 4144 2392 4494 2593 339 194 448 262 440 270 -7 7 -743 434 -1637 949 -894 516 -2001 1155 -2460 1420 -459 265 -845 487 -857 494 l-23 12 0 -2882z"/>
                             </Border>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="Button.IsMouseOver" Value="True">
@@ -77,14 +77,14 @@
             </StackPanel>
         </DockPanel>
 
-        <Grid Name="songsGrid"  Height="340" Width="600" Margin="0,10,0,0" Background="#FFF6E2F0" >
+        <Grid Name="songsGrid"  Height="340" Width="600" Margin="0,10,0,0" Background="#212121" >
             <DataGrid  x:Name="dataGrid" Style="{DynamicResource DataGridStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle2}" CellStyle="{DynamicResource DataGridCellStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" VirtualizingPanel.VirtualizationMode="Standard" MouseDoubleClick="select_recently">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Title" Width="300" CanUserResize="False" IsReadOnly="True"
+                    <DataGridTextColumn Header="Title" Foreground="#FFF" Width="300" CanUserResize="False" IsReadOnly="True"
                                             Binding="{Binding title}"/>
-                    <DataGridTextColumn Header="Singer" Width="200" CanUserResize="False" IsReadOnly="True"
+                    <DataGridTextColumn Header="Singer" Foreground="#FFF" Width="200" CanUserResize="False" IsReadOnly="True"
                                             Binding="{Binding singer}" />
-                    <DataGridTextColumn Header="" Width="*" CanUserResize="False" IsReadOnly="True"
+                    <DataGridTextColumn Header="" Width="*"  Foreground="#FFF" CanUserResize="False" IsReadOnly="True"
                                             Binding="{Binding time}" />
                     
                 </DataGrid.Columns>

@@ -42,10 +42,10 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#f2b6e2"/>
+                    <Setter Property="Background" Value="#121212"/>
                 </Trigger>
                 <Trigger Property="IsSelected" Value="True">
-                    <Setter Property="Background" Value="#f2b6e2"/>
+                    <Setter Property="Background" Value="#121212"/>
                     <Setter Property="FontWeight" Value="SemiBold"/>
                 </Trigger>
 
@@ -64,7 +64,7 @@
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Cursor" Value="SizeWE"/>-->
             <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="#444b54"/>
+            <Setter Property="Foreground" Value="#FFF"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Thumb}">
@@ -92,10 +92,10 @@
             </Setter>
         </Style>
         <SolidColorBrush x:Key="OptionMark.Static.Background" Color="#FFFFFFFF"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#f2b6e2"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#f2b6e2"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#12C64B"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#12C64B"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#12C64B"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#12C64B"/>
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
@@ -136,10 +136,10 @@
         <SolidColorBrush x:Key="OptionMark.Static.Border" Color="#FF707070"/>
         <SolidColorBrush x:Key="OptionMark.Static.Glyph" Color="#FF212121"/>
         <SolidColorBrush x:Key="OptionMark.MouseOver.Background" Color="#FFF3F9FF"/>
-        <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="#FF5593FF"/>
+        <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="#12C64B"/>
         <SolidColorBrush x:Key="OptionMark.MouseOver.Glyph" Color="#FF212121"/>
         <SolidColorBrush x:Key="OptionMark.Pressed.Background" Color="#FFD9ECFF"/>
-        <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="#FF3C77DD"/>
+        <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="#12C64B"/>
         <SolidColorBrush x:Key="OptionMark.Pressed.Glyph" Color="#FF212121"/>
         <SolidColorBrush x:Key="OptionMark.Disabled.Background" Color="#FFE6E6E6"/>
         <SolidColorBrush x:Key="OptionMark.Disabled.Border" Color="#FFBCBCBC"/>
@@ -210,7 +210,7 @@
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
                             <Rectangle x:Name="Border" Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SnapsToDevicePixels="True"/>
-                            <Polygon x:Name="Arrow" Fill="Black" HorizontalAlignment="Right" Margin="0,8,0,8" Opacity="0.15" Points="0,10 10,10 10,0" Stretch="Uniform" VerticalAlignment="Bottom"/>
+                            <Polygon x:Name="Arrow" Fill="#FFF" HorizontalAlignment="Right" Margin="0,8,0,8" Opacity="0.15" Points="0,10 10,10 10,0" Stretch="Uniform" VerticalAlignment="Bottom"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
@@ -296,8 +296,8 @@
         </Style>
         <Style x:Key="DataGridColumnHeaderStyle2" TargetType="{x:Type DataGridColumnHeader}">
             <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="#444b54"/>
+            <Setter Property="Background" Value="#121212"/>
+            <Setter Property="Foreground" Value="#FFF"/>
             <Setter Property="FontWeight" Value="DemiBold"/>
             <Setter Property="Margin" Value="0,0,0,5"/>
             <Setter Property="Template">

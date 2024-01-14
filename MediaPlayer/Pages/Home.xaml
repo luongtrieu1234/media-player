@@ -9,13 +9,13 @@
       Title="Home" Loaded="PageLoaded" >
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Border BorderThickness="1" CornerRadius="10" BorderBrush="#13343d">
+        <Border BorderThickness="1" CornerRadius="10" BorderBrush="#FFF">
             <MediaElement Height="300" Width="580" Name ="player" LoadedBehavior="Manual">
 
             </MediaElement>
         </Border>
         
-        <Label FontWeight="Bold" HorizontalAlignment="Center" FontSize="27" Margin="0,30,0,0">Audio title</Label>
-        <Label HorizontalAlignment="Center" FontSize="16" Foreground="#aaaeb6">Singer's name</Label>
+        <Label FontWeight="Bold" HorizontalAlignment="Center" Foreground="#FFF" FontSize="27" Margin="0,30,0,0">Audio title</Label>
+        <Label HorizontalAlignment="Center" FontSize="16" Foreground="#FFF">Singer's name</Label>
     </StackPanel>
 </Page>
