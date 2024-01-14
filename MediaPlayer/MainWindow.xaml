@@ -92,7 +92,7 @@
 
     </Window.Resources>
     <Canvas Background="#FFDFCAE3">
-        <DockPanel LastChildFill="True" HorizontalAlignment="Center" Height="630" Background="#FFA348A4" VerticalAlignment="Center" Width="898">
+        <DockPanel LastChildFill="True" HorizontalAlignment="Center" Height="630" Background="#000" VerticalAlignment="Center" Width="898">
             <DockPanel x:Name="footer" DockPanel.Dock="Bottom" LastChildFill="True" Height="124">
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" Width="290">
                     <!--<MediaElement MediaOpened="player_MediaOpened" MediaEnded="player_MediaEnded" Height="80" Width="115" x:Name ="player" LoadedBehavior="Manual"/>-->
@@ -161,8 +161,8 @@
                     </StackPanel>
                 </DockPanel>
             </DockPanel>
-            <StackPanel Background="#FFA348A4" Width="180" DockPanel.Dock="Left">
-                <StackPanel Orientation="Horizontal" Background="#FFA348A4" Height="83">
+            <StackPanel Background="#000" Width="197" DockPanel.Dock="Left">
+                <StackPanel Orientation="Horizontal" Background="#000" Height="83">
                     <Image x:Name="appicon" Source="Images/icon.png" Width="50" Margin="8"/>
                     <Label Content="Media Player"  VerticalAlignment="Center" FontFamily="Inter" Foreground="#FFF2B6E2" FontSize="16" FontWeight="Bold"/>
                 </StackPanel>
